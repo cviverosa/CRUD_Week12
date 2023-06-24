@@ -1,8 +1,8 @@
-$(document).on("DOMContentLoaded", function () {
+$(document).ready(function () {
   var recipeList = [];
 
   // Create Recipe button click event
-  $(document).on("click", "#create-new-recipe", function () {
+  $("#create-new-recipe").click(function () {
     var recipeName = $("#new_recipe-name").val();
     if (recipeName !== "") {
       var recipe = new Recipe(recipeName);
@@ -177,7 +177,7 @@ $(document).on("DOMContentLoaded", function () {
     }
   }
 
-  //   // Ingredient class
+  // Ingredient class
   class Ingredient {
     constructor(name, amount) {
       this.name = name;
